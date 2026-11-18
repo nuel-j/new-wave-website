@@ -1,6 +1,6 @@
 # New Wave decision log
 
-> Version 1.1 · Updated 2026-11-18
+> Version 1.2 · Updated 2026-11-18
 
 This log separates confirmed direction from decisions that still need the owner. Update it when a choice is made; keep the dated history below.
 
@@ -34,6 +34,9 @@ This log separates confirmed direction from decisions that still need the owner.
 | D-15 | Owner authorizes use of all client-owned supplied content and says permissions are secured. | Owner discovery, 2026-11-18 |
 | D-16 | Choose the quickest maintainable technical path; a shareable client review preview is required. | Owner discovery, 2026-11-18 |
 | D-17 | Owner says logo options were previously shared; recovered files do not contain them. Choose among the originals after they are made available. | Owner discovery and recovered file inventory, 2026-11-18 |
+| D-18 | Admin must edit all site content, including the surfer's name, products, events, artists, playlists, submissions/newsletter settings, and editorial content. | Owner follow-up, 2026-11-18 |
+| D-19 | No launch platform accounts were chosen; the website needs integrated admin workflows. A payment provider is still required for real transactions. | Owner follow-up, 2026-11-18 |
+| D-20 | Proceed with a temporary blue-led palette until the owner supplies color concepts and logo options. | Owner follow-up, 2026-11-18 |
 
 ## Open decisions
 
