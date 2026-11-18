@@ -63,7 +63,7 @@ const subsections = ["Editorial", "Photography", "Interviews", "Culture"];
 export const NewWaveMultiPagePrototype = () => {
   const [page, setPage] = useState<Page>("Home");
   const [subsection, setSubsection] = useState("Editorial");
-  const [assistantOpen, setAssistantOpen] = useState(true);
+  const [assistantOpen, setAssistantOpen] = useState(false);
   const [expression, setExpression] = useState<Expression>("idle");
   const [message, setMessage] = useState(tips.Home);
   const [greeted, setGreeted] = useState(false);
@@ -74,10 +74,11 @@ export const NewWaveMultiPagePrototype = () => {
   useEffect(() => {
     if (greeted) return;
     const timer = window.setTimeout(() => {
-      setMessage(tips.Home);
+      setMessage("Hey, you made it. I'm your New Wave guide. Need a hand finding your way around?");
       setExpression("talking");
+      setAssistantOpen(true);
       setGreeted(true);
-    }, 3000);
+    }, 4200);
     return () => window.clearTimeout(timer);
   }, [greeted]);
   useEffect(() => {
@@ -88,7 +89,8 @@ export const NewWaveMultiPagePrototype = () => {
     setPage(next);
     setMenuOpen(false);
     setMessage(tips[next]);
-    setExpression("talking");
+    setExpression("pointing");
+    setAssistantOpen(true);
     if (next === "New Wave") setSubsection("Editorial");
   };
   const ask = (kind: "tour" | "shop" | "events" | "music" | "artists") => {
@@ -154,11 +156,22 @@ export const NewWaveMultiPagePrototype = () => {
         if (email.includes("@")) setJoined(true);
       }}><label htmlFor="nw-email">Your email address</label><div><input id="nw-email" type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" /><button>{joined ? "YOU'RE ON THE LIST ✓" : "SIGN ME UP ↗"}</button></div><small>{joined ? "Thanks — newsletter delivery will activate when the mailing service is connected." : "No noise. Just the good stuff."}</small></form></section>
     <footer className="nw-footer"><button className="nw-brand" onClick={() => go("Home")}><span>NEW</span><i>WAVE</i><b>✳</b></button><span>THE INTERNET NEEDS A BEACH DAY.</span><span>© NEW WAVE</span></footer>
-    {assistantOpen ? <aside className="nw-assistant" aria-label="New Wave surfer guide">
-      <div className="nw-assistant-character"><img src={expressions[expression]} alt={"New Wave surfer girl, " + expression + " expression"} onError={e => {
+    <aside className={assistantOpen ? "nw-assistant is-open" : "nw-assistant"} aria-label="New Wave surfer guide">
+      {assistantOpen && <section className="nw-assistant-bubble" aria-live="polite">
+        <div className="nw-assistant-top"><span>YOUR NEW WAVE GUIDE</span><button aria-label="Close assistant message" onClick={() => setAssistantOpen(false)}>×</button></div>
+        <p>{message}</p>
+        <div className="nw-assistant-actions"><button onClick={() => ask("tour")}>Explore</button><button onClick={() => ask("shop")}>Shop</button><button onClick={() => ask("events")}>Events</button></div>
+        <span className="nw-assistant-hint">Tap me whenever you need a hand</span>
+      </section>}
+      <button className="nw-assistant-character" aria-label="Talk to your New Wave guide" onClick={() => {
+        setAssistantOpen(!assistantOpen);
+        setExpression("talking");
+      }} onMouseEnter={() => setExpression("pointing")} onMouseLeave={() => setExpression("idle")}>
+        <img src={expressions[expression]} alt="New Wave surfer girl guide" onError={e => {
           (e.currentTarget as HTMLImageElement).style.visibility = "hidden";
-        }} /><span className="nw-character-glint">✳</span></div>
-      <div className="nw-assistant-bubble"><div className="nw-assistant-top"><span>YOUR NEW WAVE GUIDE</span><button aria-label="Minimize assistant" onClick={() => setAssistantOpen(false)}>−</button></div><p>{message}</p><div className="nw-assistant-actions"><button onClick={() => ask("tour")}>Show me around</button><button onClick={() => ask("shop")}>Help me shop</button><button onClick={() => ask("events")}>What's happening?</button></div></div>
-    </aside> : <button className="nw-assistant-peek" onClick={() => setAssistantOpen(true)}>✳ SAY HI TO YOUR GUIDE</button>}
+        }} />
+        <span className="nw-character-glint">✳</span><span className="nw-assistant-status">NEED A HAND?</span>
+      </button>
+    </aside>
   </main>;
 };
