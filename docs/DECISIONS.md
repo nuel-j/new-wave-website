@@ -1,6 +1,6 @@
 # New Wave decision log
 
-> Version 1.0 · Updated 2026-11-18
+> Version 1.1 · Updated 2026-11-18
 
 This log separates confirmed direction from decisions that still need the owner. Update it when a choice is made; keep the dated history below.
 
@@ -25,9 +25,19 @@ This log separates confirmed direction from decisions that still need the owner.
 - A later local redesign explored a persistent surfer and timeline with sprite-sheet animation. It was not uploaded or verified in the public preview.
 - The older layout's exact menu grouping and generated copy need alignment with the current confirmed navigation and sections.
 
+
+| D-10 | The site's purpose is to express a calm, relaxed, uplifting lifestyle and culture vibe that helps visitors leave worries behind while feeling inspired. No Lagos association. | Owner discovery, 2026-11-18 |
+| D-11 | All site sections and business functions must work at launch; no final placeholder-only functionality. Priorities called out: shop checkout, music, artist submissions, newsletters. Events/tickets and all other areas are also launch requirements. | Owner discovery, 2026-11-18 |
+| D-12 | Surfer guide is a 3D female character, bubbly but cool, helpful yet unobtrusive; name is configurable in admin. | Owner discovery, 2026-11-18 |
+| D-13 | Pixel-art is an occasional influence, never dominant or blinding. | Owner discovery, 2026-11-18 |
+| D-14 | Editorial, Photography, Interviews, Culture are interactive subsections within the New Wave destination, opened through polished controls. | Owner discovery, 2026-11-18 |
+| D-15 | Owner authorizes use of all client-owned supplied content and says permissions are secured. | Owner discovery, 2026-11-18 |
+| D-16 | Choose the quickest maintainable technical path; a shareable client review preview is required. | Owner discovery, 2026-11-18 |
+| D-17 | Owner says logo options were previously shared; recovered files do not contain them. Choose among the originals after they are made available. | Owner discovery and recovered file inventory, 2026-11-18 |
+
 ## Open decisions
 
-No open choice should override the confirmed direction above. See the prioritized discovery list in `docs/BACKLOG.md`; answers will be recorded here before implementation.
+Remaining content, brand asset, vendor, and payment configuration questions are tracked in `docs/BACKLOG.md`; do not invent operational facts or credentials.
 
 ## Change history
 
