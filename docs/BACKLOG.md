@@ -1,6 +1,6 @@
 # New Wave project backlog
 
-> Version 1.3 · Updated 2026-11-18
+> Version 1.4 · Updated 2026-11-18
 
 ## Discovery — answered 2026-11-18
 
@@ -56,8 +56,8 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [x] Choose the surfer-girl assistant as a permanent native feature of the New Wave website, mounted from the shared application layout and persistent across route changes.
 - [x] Keep the standalone `assistant-widget.js` separate as a future reusable client-installation product; do not make it the primary New Wave implementation.
 - [ ] Import and review the four supplied character-expression images; host optimized assets with the website rather than depending on an unverified third-party image host.
-- [ ] Build the native assistant component with idle, greeting/talking, thinking, and pointing states; add clear minimize/reopen controls and a visitor-friendly greeting frequency.
-- [ ] Connect assistant actions to real site destinations and page context (Shop, Events, Sound/Music, Artists, About, and New Wave subsections).
+- [x] Build first native assistant UI with idle, talking, thinking, and pointing states, minimize/reopen controls, and delayed greeting. Expression image hosting and QA remain.
+- [x] Connect prototype assistant prompts to site section states (Shop, Events, Sound/Music, Artists, About, and New Wave subsections).
 - [ ] Make character name and assistant copy configurable through the admin panel.
 - [ ] Add keyboard/accessibility support, reduced-motion behavior, mobile sizing, and performance safeguards.
 - [ ] Consider secure AI chat through a backend only after the site's content model and service integrations are in place; never expose an API key in client-side JavaScript.
@@ -66,8 +66,8 @@ These are prioritized. Existing visual direction and navigation are settled; que
 
 - [ ] Inspect recovered source, package/configuration, design and sprite assets; note ownership and reuse permission. Existing surfer sprite is recovered as reference art; no approved logo files were found.
 - [ ] Choose the shortest maintainable implementation path compatible with the recovered code and the user's integration/hosting answers.
-- [ ] Adapt information architecture to the confirmed seven navigation destinations and four New Wave content areas.
-- [ ] Implement responsive layout, keyboard navigation, accessible motion controls, reduced-motion behavior, and performant persistent character/background.
+- [x] Adapt first prototype to seven navigation destinations and four New Wave content areas.
+- [x] Implement initial responsive layout, keyboard focus styling, and reduced-motion handling; full accessibility/performance verification remains.
 - [ ] Replace unverified sample artists, events, places, links, and product details with owner-provided content or visibly marked placeholders.
 - [ ] Run the project and verify routes/interactions plus desktop and mobile rendering; fix observed issues.
 - [ ] Capture preview/screenshots and summarize what is built, what is verified, and the remaining finishing choices.
@@ -78,5 +78,6 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [x] Record recovered design direction and earlier prototype state.
 - [x] Create versioned project memory, decision log, and backlog.
 - [ ] Complete discovery with owner.
-- [ ] Build, run, and verify the site.
+- [x] Build first interactive MagicPath prototype and mirror component source to GitHub.
+- [ ] Complete browser/device QA and wire real business services.
 - [ ] Present preview and screenshots for finishing review.
