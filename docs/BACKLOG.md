@@ -1,6 +1,6 @@
 # New Wave project backlog
 
-> Version 1.2 · Updated 2026-11-18
+> Version 1.3 · Updated 2026-11-18
 
 ## Discovery — answered 2026-11-18
 
@@ -50,6 +50,17 @@ These are prioritized. Existing visual direction and navigation are settled; que
 8. **Build target:** Is this a visual prototype first, or should we wire real services now? If real integrations are needed, which platforms are already chosen for commerce, events, music, and publishing?
 9. **Technical preferences:** Is there a required hosting platform, domain, framework, or account integration? If not, approve choosing the simplest path after inspecting the recovered source.
 10. **Finishing format:** For review, is a locally running preview with screenshots sufficient, or is a shareable hosted preview expected? No deployment/publishing is assumed without confirmation.
+
+## Assistant architecture — confirmed 2026-11-18
+
+- [x] Choose the surfer-girl assistant as a permanent native feature of the New Wave website, mounted from the shared application layout and persistent across route changes.
+- [x] Keep the standalone `assistant-widget.js` separate as a future reusable client-installation product; do not make it the primary New Wave implementation.
+- [ ] Import and review the four supplied character-expression images; host optimized assets with the website rather than depending on an unverified third-party image host.
+- [ ] Build the native assistant component with idle, greeting/talking, thinking, and pointing states; add clear minimize/reopen controls and a visitor-friendly greeting frequency.
+- [ ] Connect assistant actions to real site destinations and page context (Shop, Events, Sound/Music, Artists, About, and New Wave subsections).
+- [ ] Make character name and assistant copy configurable through the admin panel.
+- [ ] Add keyboard/accessibility support, reduced-motion behavior, mobile sizing, and performance safeguards.
+- [ ] Consider secure AI chat through a backend only after the site's content model and service integrations are in place; never expose an API key in client-side JavaScript.
 
 ## Implementation backlog — start after discovery
 
