@@ -100,3 +100,15 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [ ] Obtain approved layered character artwork (PSD/AI/SVG/Krita) or agree to reconstruct layers from the supplied flattened PNG references.
 - [ ] Produce and integrate Rive `.riv` rig with layered idle motion and non-verbal randomised idle actions.
 - [ ] Integrate click-only state machine and verify no uninvited communication can trigger.
+
+
+## Reconstruction progress — 2026-11-18
+- [x] User approved reconstruction from existing character references; user currently phone-only.
+- [x] Generated turnaround, expression, layer-breakdown and animation-behaviour studies.
+- [x] Generated nine-panel idle-action sprite study and looping GIF concept study.
+- [x] Assembled reference and study starter pack (working-session artifact; binary pack not yet committed to repository).
+- [ ] Produce clean transparent movable-part artwork; current generated boards are not production layers.
+- [ ] Build and test actual skeletal/mesh rig and web runtime.
+- [ ] Integrate fully animated guide with click-only communication and verify on mobile.
+
+See `docs/CHARACTER_RECONSTRUCTION_PROGRESS.md` for current status and artifact details.
