@@ -1,6 +1,6 @@
 # New Wave project backlog
 
-> Version 1.4 · Updated 2026-11-18
+> Version 1.5 · Updated 2026-11-18
 
 ## Discovery — answered 2026-11-18
 
@@ -81,3 +81,13 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [x] Build first interactive MagicPath prototype and mirror component source to GitHub.
 - [ ] Complete browser/device QA and wire real business services.
 - [ ] Present preview and screenshots for finishing review.
+
+
+## Modern Clippy-inspired surfer guide — implementation update
+- [x] Keep the character present when the speech bubble is dismissed.
+- [x] Add a delayed first greeting rather than immediately occupying the screen.
+- [x] Make the speech bubble dismissible and reopenable by tapping the character.
+- [x] Add subtle idle float, hover reaction, contextual prompts on navigation, and reduced-motion handling.
+- [ ] Add richer character animation (sprite/rigged 2D or 3D) with blink, mouth movement, wave, surfboard movement and expressive transitions.
+- [ ] Add a safe, page-aware suggestion engine that offers help only when relevant and never blocks content.
+- [ ] Validate mobile safe-area placement and keyboard/screen-reader behaviour on real devices.
