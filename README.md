@@ -1,19 +1,28 @@
 # New Wave website
 
-> Version 1.0 · 2026-11-18 · Source of truth for the website project
+> Version 1.1 · 2026-11-18 · Source of truth for the website project
 
-New Wave is a warm, lively, welcoming creative collective with an aquatic and surf spirit. The website should feel like a playful coastal club and independent culture publication: retro-futurist digital nostalgia, anime-inspired 3D character art, and a blue-led palette capped at five colors.
+New Wave is a lifestyle and culture brand whose website should let visitors feel its calm, relaxed, uplifting beach energy. It is not tied to Lagos or any specific location. The website should feel like a playful coastal club and independent culture publication: retro-futurist digital nostalgia, anime-inspired 3D character art, and a blue-led palette capped at five colors.
 
 ## Direction already agreed
 
-- Voice and feeling: warm, lively, welcoming, curious, creative, playful.
+- Voice and feeling: calm, relaxed, uplifting, warm, lively, welcoming, curious, creative, playful.
 - Visual world: aquatic/surf theme; retro-futurist and digitally nostalgic; anime-inspired 3D.
 - Palette: blue base; no more than five colors.
 - Persistent visual: a surfer character/background that remains present across the experience while staying performant.
 - Navigation: **Home, Shop, Events, Sound/Music, Artists, About, New Wave**.
 - The **New Wave** section covers Editorial, Photography, Interviews, and Culture.
 - Never use the label “Journal”.
-- The site should be a complete, navigable experience and be shown in a working preview before finishing choices are made.
+- All sections and business functions should work at launch. The owner's stated functional priorities are shop checkout, music, artist submissions, and newsletters; events/tickets and other sections must also be functional.
+- The surfer guide is a three-dimensional female character with a bubbly but cool personality. She can guide visitors and settle into a small, unobtrusive idle pose. Her name must be changeable in the admin panel.
+- The pixel-art aesthetic may influence selected details but should not dominate or become visually blinding.
+- Editorial, Photography, Interviews, and Culture are interactive subsections within one New Wave destination, revealed through polished nested/button interactions.
+- The owner will supply color concepts. Logo options were previously shared, but are not present in the recovered local files or accessible preview; retrieve them before choosing.
+- The requested review is a shareable preview suitable for showing clients.
+
+## Owner discovery answers (2026-11-18)
+
+The website's purpose is to express a calm, relaxed lifestyle and culture vibe that makes visitors feel they can leave their worries behind while still feeling inspired to keep going. It is not associated with Lagos. Everything should be functional for launch; no visual-only modules are accepted as final functionality. The owner authorizes the use of their client's content and says the client has permission for all supplied materials. Technical stack and hosting may be chosen for speed and maintainability, subject to later revision. No logo choice, color concepts, external reference sites/images, platform accounts, or operational credentials were available in this workspace at the time of the answers.
 
 ## Prior work recovered
 
