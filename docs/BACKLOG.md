@@ -1,6 +1,6 @@
 # New Wave project backlog
 
-> Version 1.1 · Updated 2026-11-18
+> Version 1.2 · Updated 2026-11-18
 
 ## Discovery — answered 2026-11-18
 
@@ -12,7 +12,9 @@ The owner defined the lifestyle/culture purpose, removed Lagos as a location ass
 - [ ] Brand color concepts, references, imagery, and typography choices: owner plans to provide ideas; preserve blue-led max-five-color constraint until then.
 - [ ] Actual commerce, events/ticketing, music, newsletter, submission, and editorial provider/accounts; payment and email credentials must be supplied by the owner at integration time.
 - [ ] Approved launch content: owner authorizes all supplied content, but actual product/event/artist/editorial data and social/contact URLs were not attached in this workspace.
-- [ ] Admin requirements/access model: owner specifically needs surfer character name editing; confirm the scope of other admin-managed data while building architecture.
+- [x] Admin scope: edit all site content, including the surfer's name, products, events, artists, playlists, submissions/newsletter settings, and editorial content.
+- [ ] Backend provisioning: no Supabase projects currently exist; the connected account has one organization (EmmanuelJones's Org). Ask the owner to choose the organization and approve any quoted nonzero cost before creating a project.
+- [ ] Payment and delivery services: no commerce, ticketing, email/newsletter, or payment provider accounts are selected. The in-site admin is the content management UI; actual payment processing and email delivery need a provider connection and credentials.
 
 ## Prioritized discovery — answer during design/integration
 
@@ -51,7 +53,7 @@ These are prioritized. Existing visual direction and navigation are settled; que
 
 ## Implementation backlog — start after discovery
 
-- [ ] Inspect recovered source, package/configuration, design and sprite assets; note license/ownership and whether they can be reused.
+- [ ] Inspect recovered source, package/configuration, design and sprite assets; note ownership and reuse permission. Existing surfer sprite is recovered as reference art; no approved logo files were found.
 - [ ] Choose the shortest maintainable implementation path compatible with the recovered code and the user's integration/hosting answers.
 - [ ] Adapt information architecture to the confirmed seven navigation destinations and four New Wave content areas.
 - [ ] Implement responsive layout, keyboard navigation, accessible motion controls, reduced-motion behavior, and performant persistent character/background.
