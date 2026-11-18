@@ -66,21 +66,10 @@ export const NewWaveMultiPagePrototype = () => {
   const [assistantOpen, setAssistantOpen] = useState(false);
   const [expression, setExpression] = useState<Expression>("idle");
   const [message, setMessage] = useState(tips.Home);
-  const [greeted, setGreeted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
-  useEffect(() => {
-    if (greeted) return;
-    const timer = window.setTimeout(() => {
-      setMessage("Hey, you made it. I'm your New Wave guide. Need a hand finding your way around?");
-      setExpression("talking");
-      setAssistantOpen(true);
-      setGreeted(true);
-    }, 4200);
-    return () => window.clearTimeout(timer);
-  }, [greeted]);
   useEffect(() => {
     const timer = window.setTimeout(() => setExpression("idle"), 2600);
     return () => window.clearTimeout(timer);
@@ -88,9 +77,6 @@ export const NewWaveMultiPagePrototype = () => {
   const go = (next: Page) => {
     setPage(next);
     setMenuOpen(false);
-    setMessage(tips[next]);
-    setExpression("pointing");
-    setAssistantOpen(true);
     if (next === "New Wave") setSubsection("Editorial");
   };
   const ask = (kind: "tour" | "shop" | "events" | "music" | "artists") => {
