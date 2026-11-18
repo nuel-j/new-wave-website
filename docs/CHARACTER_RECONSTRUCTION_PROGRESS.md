@@ -113,3 +113,17 @@ The GitHub repository remains the source of truth for the written project record
 - `prototype/components/generated/`
 
 The consolidated archive is a recovery copy of locally available assets; it does not contain a production rig or claim that unfinished work is complete. Keep GitHub and the Library archive as separate backups. When the user's laptop is available, download the ZIP and keep an offline copy there too.
+
+
+## Full recovery backup — 2026-11-18
+
+A complete local recovery archive was assembled and uploaded to the persistent ChatGPT Library.
+
+- Archive: `/New Wave/Backups/NEW_WAVE_COMPLETE_BACKUP_2026-11-18(1).zip`
+- Manifest: `/New Wave/Backups/BACKUP_MANIFEST_2026-11-18(1).json`
+- The archive includes locally available original character references, generated design boards, cropped planning references, sprite-sheet study, GIF concept, turnaround preview, transparent cutouts, website hero concepts, reconstruction starter pack and standalone assistant-widget prototype.
+- The archive contains a SHA-256 manifest for integrity checking.
+- Existing individual image assets remain saved under `/New Wave/Character Reconstruction/`.
+- Project decisions, backlog, animation specification, progress history and prototype source remain in this GitHub repository.
+
+This is a cloud/library recovery backup, not a direct copy to the user's laptop. The user can download the ZIP to the laptop when it is available. No claim is made that the archive contains a production-ready skeletal rig or complete production website.
