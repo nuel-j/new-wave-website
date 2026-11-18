@@ -71,3 +71,24 @@ Do not describe the character as fully rigged or alive in the production sense u
 ## User workflow constraint
 
 User currently has only an iPhone and does not think they can perform the reconstruction/rigging steps themselves. ChatGPT should do the technical preparation and implementation wherever available; do not hand the user a complex animation-software workflow. Ask only for approvals or source material that cannot be obtained otherwise.
+
+
+## Image archive saved — 2026-11-18
+
+All existing reconstruction images and reference materials have now been saved to the user's persistent ChatGPT Library folder:
+
+`/New Wave/Character Reconstruction/`
+
+Saved assets include:
+- Original character photo and both original expression sheets.
+- Reconstructed turnaround board and planning board.
+- Cropped turnaround, expression, layer-breakdown, idle-animation and click-interaction references.
+- Clean and refined character turnaround images.
+- Character design/animation board.
+- Transparent character cutout.
+- Two website hero concepts.
+- Nine-frame idle animation GIF study.
+- Turnaround JPG preview.
+- Complete reconstruction starter-pack ZIP.
+
+The Library archive is the durable image archive. The generated studies remain concepts; they are not yet editable rig layers or a production animation file.
