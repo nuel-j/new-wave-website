@@ -1,6 +1,6 @@
 # New Wave website
 
-> Version 1.2 · 2026-11-18 · Source of truth for the website project
+> Version 1.3 · 2026-11-18 · Source of truth for the website project
 
 New Wave is a lifestyle and culture brand whose website should let visitors feel its calm, relaxed, uplifting beach energy. It is not tied to Lagos or any specific location. The website should feel like a playful coastal club and independent culture publication: retro-futurist digital nostalgia, anime-inspired 3D character art, and a blue-led palette capped at five colors.
 
@@ -52,3 +52,7 @@ Use the empty `nuel-j/new-wave-website` repository as the project home. Reuse an
 - First interactive website prototype has been built in MagicPath (component revision `465113707945541632`) and its source is mirrored under `prototype/components/generated/`.
 - The first build now has seven section states, nested New Wave subsections, responsive layout, newsletter interaction, product preview interactions, and a persistent native surfer-girl assistant with expression states and section-aware prompts. Real commerce, ticketing, music playback, artist submissions, and newsletter delivery remain integration work; current UI labels those functions as pending/preview.
 - Older conversation history beyond the supplied reference preview was not retrievable in this session; the summary above uses available project memory and recovered local files.
+
+
+### Assistant interaction direction
+The surfer-girl guide now follows a modern Clippy-inspired interaction model: a persistent animated character presence, delayed first greeting, contextual prompts on navigation, an optional speech bubble that can be dismissed, and tap-to-reopen behaviour. The character gently floats and reacts to pointer hover; reduced-motion preferences are respected. It should be helpful and expressive without repeatedly interrupting visitors. MagicPath revision: `473782678743826432`.
