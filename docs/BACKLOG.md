@@ -1,6 +1,6 @@
 # New Wave project backlog
 
-> Version 1.5 · Updated 2026-11-18
+> Version 1.6 · Updated 2026-11-18
 
 ## Discovery — answered 2026-11-18
 
@@ -91,3 +91,12 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [ ] Add richer character animation (sprite/rigged 2D or 3D) with blink, mouth movement, wave, surfboard movement and expressive transitions.
 - [ ] Add a safe, page-aware suggestion engine that offers help only when relevant and never blocks content.
 - [ ] Validate mobile safe-area placement and keyboard/screen-reader behaviour on real devices.
+
+
+## Character animation — clarified requirements
+- [x] Confirm the character is ambient and non-verbal by default; no auto-greeting, auto-chat, or unsolicited speech bubble.
+- [x] Update prototype so only tapping/clicking the character opens communication; ordinary section navigation does not make her talk.
+- [x] Record Rive recommendation, rig/artwork requirements, state machine contract and performance/accessibility checklist in `docs/CHARACTER_ANIMATION_SPEC.md`.
+- [ ] Obtain approved layered character artwork (PSD/AI/SVG/Krita) or agree to reconstruct layers from the supplied flattened PNG references.
+- [ ] Produce and integrate Rive `.riv` rig with layered idle motion and non-verbal randomised idle actions.
+- [ ] Integrate click-only state machine and verify no uninvited communication can trigger.
