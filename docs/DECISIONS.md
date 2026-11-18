@@ -1,6 +1,6 @@
 # New Wave decision log
 
-> Version 1.2 · Updated 2026-11-18
+> Version 1.3 · Updated 2026-11-18
 
 This log separates confirmed direction from decisions that still need the owner. Update it when a choice is made; keep the dated history below.
 
@@ -37,6 +37,9 @@ This log separates confirmed direction from decisions that still need the owner.
 | D-18 | Admin must edit all site content, including the surfer's name, products, events, artists, playlists, submissions/newsletter settings, and editorial content. | Owner follow-up, 2026-11-18 |
 | D-19 | No launch platform accounts were chosen; the website needs integrated admin workflows. A payment provider is still required for real transactions. | Owner follow-up, 2026-11-18 |
 | D-20 | Proceed with a temporary blue-led palette until the owner supplies color concepts and logo options. | Owner follow-up, 2026-11-18 |
+| D-21 | The surfer-girl assistant is a permanent, native part of the New Wave website, mounted through the shared application layout so it persists across page navigation. Do not use the standalone `assistant-widget.js` as the primary New Wave implementation. | Owner delegated the architectural choice, 2026-11-18 |
+| D-22 | Build the native assistant as an interactive expression of the same New Wave surfer character and visual world. It must be context-aware of the current section, accessible, responsive, unobtrusive, performant, and respect reduced-motion preferences. | Architecture recommendation accepted by owner through delegated choice, 2026-11-18 |
+| D-23 | Keep `assistant-widget.js` as a separate reusable product candidate for installing customized assistants on third-party client websites; it is not the source of truth for New Wave's own assistant. | Architecture recommendation, 2026-11-18 |
 
 ## Open decisions
 
@@ -45,3 +48,4 @@ Remaining content, brand asset, vendor, and payment configuration questions are 
 ## Change history
 
 - 2026-11-18 — v1.0 created from the user's supplied brief, connected repository context, available memory, and recovered local files. Older linked conversation turns could not be retrieved in this session.
+- 2026-11-18 — v1.3 records the decision to make the surfer-girl assistant a permanent native website feature, while preserving the standalone script as a separate client-installable product.
