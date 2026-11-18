@@ -1,6 +1,6 @@
 # New Wave website
 
-> Version 1.1 · 2026-11-18 · Source of truth for the website project
+> Version 1.2 · 2026-11-18 · Source of truth for the website project
 
 New Wave is a lifestyle and culture brand whose website should let visitors feel its calm, relaxed, uplifting beach energy. It is not tied to Lagos or any specific location. The website should feel like a playful coastal club and independent culture publication: retro-futurist digital nostalgia, anime-inspired 3D character art, and a blue-led palette capped at five colors.
 
@@ -49,5 +49,6 @@ Use the empty `nuel-j/new-wave-website` repository as the project home. Reuse an
 - Repository selected: `nuel-j/new-wave-website` (public, empty at discovery, writable).
 - `nuel-j/ai-security-lab` is a separate security project and is not the website repository.
 - Project memory, decisions, and backlog are recorded in `docs/DECISIONS.md` and `docs/BACKLOG.md`.
-- Implementation has not started in this repository.
+- First interactive website prototype has been built in MagicPath (component revision `465113707945541632`) and its source is mirrored under `prototype/components/generated/`.
+- The first build now has seven section states, nested New Wave subsections, responsive layout, newsletter interaction, product preview interactions, and a persistent native surfer-girl assistant with expression states and section-aware prompts. Real commerce, ticketing, music playback, artist submissions, and newsletter delivery remain integration work; current UI labels those functions as pending/preview.
 - Older conversation history beyond the supplied reference preview was not retrievable in this session; the summary above uses available project memory and recovered local files.
