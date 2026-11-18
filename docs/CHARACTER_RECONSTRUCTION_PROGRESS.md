@@ -92,3 +92,24 @@ Saved assets include:
 - Complete reconstruction starter-pack ZIP.
 
 The Library archive is the durable image archive. The generated studies remain concepts; they are not yet editable rig layers or a production animation file.
+
+
+## Full recovery backup — 2026-11-18
+
+A consolidated recovery archive has been created and uploaded to the persistent ChatGPT Library:
+
+- Library folder: `/New Wave/Backups/`
+- Archive: `NEW_WAVE_COMPLETE_BACKUP_2026-11-18.zip`
+- Manifest: `BACKUP_MANIFEST_2026-11-18.json`
+- Archive contains 40 included files: all locally available original character references, generated reconstruction/animation studies, website hero concepts, transparent cutouts, idle GIF, turnaround preview, the standalone `assistant-widget.js`, the character reconstruction directory, and the previous starter pack ZIP.
+- Individual source/study images also remain in `/New Wave/Character Reconstruction/`.
+
+The GitHub repository remains the source of truth for the written project record and prototype code:
+- `README.md`
+- `docs/DECISIONS.md`
+- `docs/BACKLOG.md`
+- `docs/CHARACTER_ANIMATION_SPEC.md`
+- `docs/CHARACTER_RECONSTRUCTION_PROGRESS.md`
+- `prototype/components/generated/`
+
+The consolidated archive is a recovery copy of locally available assets; it does not contain a production rig or claim that unfinished work is complete. Keep GitHub and the Library archive as separate backups. When the user's laptop is available, download the ZIP and keep an offline copy there too.
