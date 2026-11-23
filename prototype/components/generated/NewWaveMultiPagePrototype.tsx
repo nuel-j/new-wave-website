@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./NewWaveMultiPagePrototype.css";
 type Page = "Home" | "Shop" | "Events" | "Sound/Music" | "Artists" | "About" | "New Wave";
 type Expression = "idle" | "talking" | "thinking" | "pointing";
@@ -70,10 +70,6 @@ export const NewWaveMultiPagePrototype = () => {
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
-  useEffect(() => {
-    const timer = window.setTimeout(() => setExpression("idle"), 2600);
-    return () => window.clearTimeout(timer);
-  }, [expression]);
   const go = (next: Page) => {
     setPage(next);
     setMenuOpen(false);
@@ -91,10 +87,16 @@ export const NewWaveMultiPagePrototype = () => {
     go(target);
     setAssistantOpen(true);
     setMessage(target === "Home" ? "Let's take a look around. Pick a section from the menu and I'll come with you." : tips[target]);
-    setExpression("pointing");
+    setExpression("thinking");
   };
   const current = copy[page];
-  return <main className="nw">
+  return <main className="nw" onClick={event => {
+    const target = event.target as HTMLElement;
+    if (target.closest(".nw-assistant")) return;
+    if (target.closest("button, a, [role='tab'], input, select, textarea")) {
+      setExpression("thinking");
+    }
+  }}>
     <header className="nw-header">
       <button className="nw-brand" onClick={() => go("Home")} aria-label="New Wave home"><span>NEW</span><i>WAVE</i><b>✳</b></button>
       <span className="nw-tagline">THE INTERNET NEEDS A BEACH DAY</span>
@@ -127,7 +129,6 @@ export const NewWaveMultiPagePrototype = () => {
       <div className="nw-section-heading"><span>THE NEW WAVE EDIT</span><h2>Culture moves<br />in every direction.</h2></div>
       <div className="nw-tabs" role="tablist">{subsections.map(item => <button role="tab" aria-selected={subsection === item} className={subsection === item ? "selected" : ""} key={item} onClick={() => {
           setSubsection(item);
-          setExpression("thinking");
           setMessage("Let's explore " + item.toLowerCase() + ". New stories will live here.");
         }}>{item}</button>)}</div>
       <div className="nw-editorial-panel"><div className="nw-panel-art"><span>NW / 00{subsections.indexOf(subsection) + 1}</span><b>{subsection.toUpperCase()}</b><i>✳</i></div><div><small>THE NEW WAVE EDIT / {subsection.toUpperCase()}</small><h3>{subsection === "Editorial" ? "Ideas worth staying for." : subsection === "Photography" ? "A different point of view." : subsection === "Interviews" ? "Meet the minds behind the motion." : "The world around the wave."}</h3><p>This space is ready for approved New Wave {subsection.toLowerCase()} stories and features.</p></div></div>
@@ -149,14 +150,15 @@ export const NewWaveMultiPagePrototype = () => {
         <div className="nw-assistant-actions"><button onClick={() => ask("tour")}>Explore</button><button onClick={() => ask("shop")}>Shop</button><button onClick={() => ask("events")}>Events</button></div>
         <span className="nw-assistant-hint">Tap me whenever you need a hand</span>
       </section>}
-      <button className="nw-assistant-character" aria-label="Talk to your New Wave guide" onClick={() => {
-        setAssistantOpen(!assistantOpen);
-        setExpression("talking");
-      }} onMouseEnter={() => setExpression("pointing")} onMouseLeave={() => setExpression("idle")}>
+      <button className="nw-assistant-character" aria-label="Talk to your New Wave guide" aria-expanded={assistantOpen} onClick={() => {
+        const opening = !assistantOpen;
+        setAssistantOpen(opening);
+        setExpression(opening ? "talking" : "idle");
+        if (opening) setMessage(tips[page]);
+      }}>
         <img src={expressions[expression]} alt="New Wave surfer girl guide" onError={e => {
           (e.currentTarget as HTMLImageElement).style.visibility = "hidden";
         }} />
-        <span className="nw-character-glint">✳</span><span className="nw-assistant-status">NEED A HAND?</span>
       </button>
     </aside>
   </main>;
