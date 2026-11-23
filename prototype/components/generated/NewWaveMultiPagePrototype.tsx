@@ -50,7 +50,6 @@ export const NewWaveMultiPagePrototype = () => {
   const [newsletterPreview, setNewsletterPreview] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
   const [selectedMix, setSelectedMix] = useState("");
-  const [artistEmail, setArtistEmail] = useState("");
   const [artistPrompt, setArtistPrompt] = useState(false);
 
   const go = (next: Page) => {
