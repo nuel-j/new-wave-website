@@ -112,3 +112,38 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [ ] Integrate fully animated guide with click-only communication and verify on mobile.
 
 See `docs/CHARACTER_RECONSTRUCTION_PROGRESS.md` for current status and artifact details.
+
+
+## Revised priority — 2026-11-23
+
+### Explicitly paused
+- [ ] 3D surfer-girl artwork, rigging, Rive integration, expressions, animation, and assistant interactions — **PAUSED by owner**. Do not work on this until explicitly resumed.
+- [ ] Character assistant UI and assets — removed from the current website prototype.
+- [ ] Final palette, typography, and visual interface redesign — **WAITING for owner direction**.
+
+### Active: page-by-page build
+- [ ] Create and verify the real application shell, shared navigation, footer, route handling, responsive behaviour, and error/loading states.
+- [ ] Home: complete brand introduction, clear section entry points, featured content modules, and real calls to action.
+- [ ] Shop: catalog, category/filter controls, product details, variants, stock, cart, checkout, payment integration, order confirmation, and admin product management.
+- [ ] Events: event listing, event detail, availability/capacity, ticket selection, checkout, confirmation, and admin event/ticket management.
+- [ ] Sound/Music: playlist and track catalogue, accessible player/embed integration, source links, and admin playlist management.
+- [ ] Artists: artist directory, artist detail pages, submission form, submission status/consent, moderation workflow, and admin management.
+- [ ] About: brand story, mission, contact methods, social links, FAQs, and policy links using owner-approved content.
+- [ ] New Wave: Editorial, Photography, Interviews, and Culture archives; category navigation, individual content detail pages, and publishing workflow.
+- [ ] Shared newsletter signup with validation, consent, duplicate handling, success/error states, and actual delivery provider.
+- [ ] Admin: secure authentication and role protection; manage products, orders, events, artists, submissions, playlists, editorial content, media, newsletter subscribers, and site settings.
+- [ ] Backend: define database schema, storage/media rules, server-side validation, permissions, audit trail, and integration secrets.
+- [ ] QA: test every route and interaction on mobile and desktop; keyboard/accessibility, loading, empty, error, and success states.
+- [ ] Deployment: environment configuration, domain, production build, smoke tests, backups, and launch checklist.
+
+### Implementation rule
+A page is not complete merely because it looks finished. Its controls must perform their stated action, data must be real or clearly identified as sample content, and any unavailable integration must be labelled honestly. Do not report a feature as live until it has been connected and tested.
+
+
+## Art direction pass — 2026-11-23
+
+- [x] Translate the Dribbble reference into an original New Wave visual language without reusing protected artwork.
+- [x] Establish expressive display typography, editorial serif accents, mono micro-labels, more tactile buttons and asymmetrical card treatments.
+- [x] Rewrite section headlines, descriptions and calls to action with a more distinctive, playful editorial voice.
+- [ ] Review the visual pass in a real browser on mobile and desktop; adjust spacing, type wrapping and contrast from observed results.
+- [ ] Replace prototype illustrations and product placeholders with approved original New Wave artwork and real content.
