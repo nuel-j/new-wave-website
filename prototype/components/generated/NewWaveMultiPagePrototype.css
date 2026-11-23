@@ -75,3 +75,18 @@
 .nw-assistant-character:hover img,.nw-assistant-character:active img{transform:none!important}
 .nw-character-glint,.nw-assistant-status{display:none!important;animation:none!important}
 .nw-assistant{animation:none!important}
+
+/* Mascot: completely still unless a visitor clicks a control. */
+.nw-assistant,
+.nw-assistant-character,
+.nw-assistant-character img,
+.nw-assistant-character:hover,
+.nw-assistant-character:active,
+.nw-assistant-character:hover img,
+.nw-assistant-character:active img {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+.nw-character-glint,
+.nw-assistant-status { display: none !important; }
