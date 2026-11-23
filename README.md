@@ -9,12 +9,12 @@ New Wave is a lifestyle and culture brand whose website should let visitors feel
 - Voice and feeling: calm, relaxed, uplifting, warm, lively, welcoming, curious, creative, playful.
 - Visual world: aquatic/surf theme; retro-futurist and digitally nostalgic; anime-inspired 3D.
 - Palette: blue base; no more than five colors.
-- Persistent visual: a surfer character/background that remains present across the experience while staying performant.
+- Previously planned persistent surfer character/background: paused by owner on 2026-11-23; excluded from the current website until explicitly resumed.
 - Navigation: **Home, Shop, Events, Sound/Music, Artists, About, New Wave**.
 - The **New Wave** section covers Editorial, Photography, Interviews, and Culture.
 - Never use the label “Journal”.
 - All sections and business functions should work at launch. The owner's stated functional priorities are shop checkout, music, artist submissions, and newsletters; events/tickets and other sections must also be functional.
-- The surfer guide is a three-dimensional female character with a bubbly but cool personality. She can guide visitors and settle into a small, unobtrusive idle pose. Her name must be changeable in the admin panel.
+- Historical character concept only: a configurable 3D surfer-girl guide. This work is paused and the character has been removed from the current website.
 - The pixel-art aesthetic may influence selected details but should not dominate or become visually blinding.
 - Editorial, Photography, Interviews, and Culture are interactive subsections within one New Wave destination, revealed through polished nested/button interactions.
 - The owner will supply color concepts. Logo options were previously shared, but are not present in the recovered local files or accessible preview; retrieve them before choosing.
@@ -50,12 +50,12 @@ Use the empty `nuel-j/new-wave-website` repository as the project home. Reuse an
 - `nuel-j/ai-security-lab` is a separate security project and is not the website repository.
 - Project memory, decisions, and backlog are recorded in `docs/DECISIONS.md` and `docs/BACKLOG.md`.
 - First interactive website prototype has been built in MagicPath (component revision `465113707945541632`) and its source is mirrored under `prototype/components/generated/`.
-- The first build now has seven section states, nested New Wave subsections, responsive layout, newsletter interaction, product preview interactions, and a persistent native surfer-girl assistant with expression states and section-aware prompts. Real commerce, ticketing, music playback, artist submissions, and newsletter delivery remain integration work; current UI labels those functions as pending/preview.
+- The first prototype has seven section states, nested New Wave subsections, responsive layout, newsletter interaction, and product preview interactions. The surfer-girl assistant has since been removed by owner instruction on 2026-11-23. Real commerce, ticketing, music playback, artist submissions, and newsletter delivery remain integration work.
 - Older conversation history beyond the supplied reference preview was not retrievable in this session; the summary above uses available project memory and recovered local files.
 
 
-### Assistant interaction direction
-The surfer-girl guide now follows a modern Clippy-inspired interaction model: a persistent animated character presence, delayed first greeting, contextual prompts on navigation, an optional speech bubble that can be dismissed, and tap-to-reopen behaviour. The character gently floats and reacts to pointer hover; reduced-motion preferences are respected. It should be helpful and expressive without repeatedly interrupting visitors. MagicPath revision: `473782678743826432`.
+### Historical assistant interaction direction (paused)
+The earlier Clippy-inspired surfer-girl guide experiment is retained in project history only. It has been removed from the current website and must not be reintroduced until the owner explicitly resumes character work.
 
 
 ## Current development direction — 2026-11-23
@@ -65,3 +65,22 @@ The surfer-girl guide now follows a modern Clippy-inspired interaction model: a 
 - Visual redesign is intentionally on hold: do not finalise palette, typography, layout styling, or brand interface changes until the owner supplies updated colour and interface direction.
 - Active work is page-by-page implementation and internal functionality. The page requirements and completion criteria are recorded in `docs/PAGE_BLUEPRINT.md`.
 - Do not describe prototype-only interactions as live services. Commerce, ticketing, music, artist submissions, newsletter delivery, and admin workflows require real implementation and provider configuration.
+
+
+## Run the current application shell
+
+The repository now includes a Vite + React + TypeScript entry point that mounts the recovered New Wave prototype.
+
+```bash
+npm install
+npm run dev
+```
+
+For a production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+The application shell has been scaffolded but has not yet been run through a local dependency install/build in this session. Verify the build in Replit or another Node-enabled environment before treating it as production-ready.
