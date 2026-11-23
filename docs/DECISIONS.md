@@ -56,3 +56,10 @@ Remaining content, brand asset, vendor, and payment configuration questions are 
 | D-24 | Pause creation of the 3D surfer-girl character and remove her and all assistant UI from the current website. Resume only when the owner explicitly asks. | Owner instruction, 2026-11-23 |
 | D-25 | Defer interface and colour redesign until the owner supplies updated direction. Do not lock the palette or visual system in the meantime. | Owner instruction, 2026-11-23 |
 | D-26 | Prioritise page-by-page website implementation and internal functionality across all seven destinations. | Owner instruction, 2026-11-23 |
+
+
+## New visual direction — 2026-11-23
+
+| D-27 | Use the supplied Dribbble illustration reference as broad art direction only: expressive, artsy, editorial and playful. Translate its spirit into original New Wave typography, copywriting, composition and controls; do not reuse the creator's artwork or copy a finished layout. | Owner instruction, 2026-11-23 |
+| D-28 | Use a restrained five-colour coastal palette already present in the prototype, with a stronger expressive type pairing and editorial layout treatment. Treat this as the working direction, not a final lock; owner can refine later. | Implementation choice, 2026-11-23 |
+| D-29 | Keep the surfer-girl character and assistant paused. The new visual direction does not reactivate character work. | Owner instruction, 2026-11-23 |
