@@ -68,3 +68,10 @@
   .nw-assistant{max-width:calc(100vw - 20px)}
   .nw-assistant-bubble{max-width:calc(100vw - 28px)}
 }
+/* Mascot behaviour: still by default; expression changes only after a deliberate click. */
+.nw-assistant-character{animation:none!important;transform:none!important;transition:none!important}
+.nw-assistant-character:hover,.nw-assistant-character:active{transform:none!important}
+.nw-assistant-character img{transform:none!important;transition:none!important}
+.nw-assistant-character:hover img,.nw-assistant-character:active img{transform:none!important}
+.nw-character-glint,.nw-assistant-status{display:none!important;animation:none!important}
+.nw-assistant{animation:none!important}
