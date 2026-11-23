@@ -56,3 +56,12 @@ Use the empty `nuel-j/new-wave-website` repository as the project home. Reuse an
 
 ### Assistant interaction direction
 The surfer-girl guide now follows a modern Clippy-inspired interaction model: a persistent animated character presence, delayed first greeting, contextual prompts on navigation, an optional speech bubble that can be dismissed, and tap-to-reopen behaviour. The character gently floats and reacts to pointer hover; reduced-motion preferences are respected. It should be helpful and expressive without repeatedly interrupting visitors. MagicPath revision: `473782678743826432`.
+
+
+## Current development direction — 2026-11-23
+
+- The 3D surfer-girl character and assistant are **paused**. They must not appear in the current website build. Do not spend implementation time on character art, rigging, animation, assistant UI, or character assets until the owner explicitly resumes that work.
+- The current prototype has had the character UI, assistant state, remote expression-image dependencies, and assistant CSS removed.
+- Visual redesign is intentionally on hold: do not finalise palette, typography, layout styling, or brand interface changes until the owner supplies updated colour and interface direction.
+- Active work is page-by-page implementation and internal functionality. The page requirements and completion criteria are recorded in `docs/PAGE_BLUEPRINT.md`.
+- Do not describe prototype-only interactions as live services. Commerce, ticketing, music, artist submissions, newsletter delivery, and admin workflows require real implementation and provider configuration.
