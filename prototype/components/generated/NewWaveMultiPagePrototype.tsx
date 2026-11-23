@@ -98,10 +98,10 @@ export const NewWaveMultiPagePrototype = () => {
     <header className="nw-header">
       <button className="nw-brand" onClick={() => go("Home")} aria-label="New Wave home"><span>NEW</span><i>WAVE</i><b>✳</b></button>
       <span className="nw-tagline">THE INTERNET NEEDS A BEACH DAY</span>
-      <nav className={menuOpen ? "nw-nav is-open" : "nw-nav"} aria-label="Main navigation">
+      <nav id="nw-main-nav" className={menuOpen ? "nw-nav is-open" : "nw-nav"} aria-label="Main navigation">
         {pages.map(item => <button key={item} className={page === item ? "active" : ""} onClick={() => go(item)}>{item === "Sound/Music" ? "Sound" : item}</button>)}
       </nav>
-      <button className="nw-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? "CLOSE −" : "MENU +"}</button>
+      <button className="nw-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen} aria-controls="nw-main-nav">{menuOpen ? "CLOSE −" : "MENU +"}</button>
     </header>
     <section className={"nw-hero nw-hero-" + page.toLowerCase().replace(/[^a-z]+/g, "-")}>
       <div className="nw-sun" aria-hidden="true" /><div className="nw-cloud nw-cloud-one" /><div className="nw-cloud nw-cloud-two" />
