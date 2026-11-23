@@ -138,3 +138,12 @@ See `docs/CHARACTER_RECONSTRUCTION_PROGRESS.md` for current status and artifact 
 
 ### Implementation rule
 A page is not complete merely because it looks finished. Its controls must perform their stated action, data must be real or clearly identified as sample content, and any unavailable integration must be labelled honestly. Do not report a feature as live until it has been connected and tested.
+
+
+## Art direction pass — 2026-11-23
+
+- [x] Translate the Dribbble reference into an original New Wave visual language without reusing protected artwork.
+- [x] Establish expressive display typography, editorial serif accents, mono micro-labels, more tactile buttons and asymmetrical card treatments.
+- [x] Rewrite section headlines, descriptions and calls to action with a more distinctive, playful editorial voice.
+- [ ] Review the visual pass in a real browser on mobile and desktop; adjust spacing, type wrapping and contrast from observed results.
+- [ ] Replace prototype illustrations and product placeholders with approved original New Wave artwork and real content.
