@@ -49,3 +49,10 @@ Remaining content, brand asset, vendor, and payment configuration questions are 
 
 - 2026-11-18 — v1.0 created from the user's supplied brief, connected repository context, available memory, and recovered local files. Older linked conversation turns could not be retrieved in this session.
 - 2026-11-18 — v1.3 records the decision to make the surfer-girl assistant a permanent native website feature, while preserving the standalone script as a separate client-installable product.
+
+
+## New owner direction — 2026-11-23
+
+| D-24 | Pause creation of the 3D surfer-girl character and remove her and all assistant UI from the current website. Resume only when the owner explicitly asks. | Owner instruction, 2026-11-23 |
+| D-25 | Defer interface and colour redesign until the owner supplies updated direction. Do not lock the palette or visual system in the meantime. | Owner instruction, 2026-11-23 |
+| D-26 | Prioritise page-by-page website implementation and internal functionality across all seven destinations. | Owner instruction, 2026-11-23 |
