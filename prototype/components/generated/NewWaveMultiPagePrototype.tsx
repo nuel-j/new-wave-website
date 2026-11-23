@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./NewWaveMultiPagePrototype.css";
 type Page = "Home" | "Shop" | "Events" | "Sound/Music" | "Artists" | "About" | "New Wave";
 const pages: Page[] = ["Home", "Shop", "Events", "Sound/Music", "Artists", "About", "New Wave"];
+const pagePaths: Record<Page, string> = { Home: "/", Shop: "/shop", Events: "/events", "Sound/Music": "/sound", Artists: "/artists", About: "/about", "New Wave": "/new-wave" };
+const pageFromPath = (): Page => (Object.entries(pagePaths).find(([, path]) => path === window.location.pathname)?.[0] as Page | undefined) ?? "Home";
 const copy: Record<Page, {
   eyebrow: string;
   title: string;
@@ -45,13 +47,31 @@ const copy: Record<Page, {
 };
 const subsections = ["Editorial", "Photography", "Interviews", "Culture"];
 export const NewWaveMultiPagePrototype = () => {
-  const [page, setPage] = useState<Page>("Home");
+  const [page, setPage] = useState<Page>(() => pageFromPath());
   const [subsection, setSubsection] = useState("Editorial");
   const [menuOpen, setMenuOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
+  useEffect(() => {
+    const syncPage = () => {
+      const match = Object.entries(pagePaths).find(([, path]) => path === window.location.pathname)?.[0] as Page | undefined;
+      if (!match) {
+        window.history.replaceState({}, "", "/");
+        setPage("Home");
+        return;
+      }
+      setPage(match);
+      if (match === "New Wave") setSubsection("Editorial");
+    };
+    window.addEventListener("popstate", syncPage);
+    return () => window.removeEventListener("popstate", syncPage);
+  }, []);
+  useEffect(() => {
+    document.title = `${page === "Sound/Music" ? "Sound" : page} | New Wave`;
+  }, [page]);
   const go = (next: Page) => {
+    window.history.pushState({}, "", pagePaths[next]);
     setPage(next);
     setMenuOpen(false);
     if (next === "New Wave") setSubsection("Editorial");
