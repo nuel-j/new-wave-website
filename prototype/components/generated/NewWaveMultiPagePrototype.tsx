@@ -1,23 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./NewWaveMultiPagePrototype.css";
 type Page = "Home" | "Shop" | "Events" | "Sound/Music" | "Artists" | "About" | "New Wave";
-type Expression = "idle" | "talking" | "thinking" | "pointing";
 const pages: Page[] = ["Home", "Shop", "Events", "Sound/Music", "Artists", "About", "New Wave"];
-const expressions: Record<Expression, string> = {
-  idle: "https://yourimageshare.com/ib/OC7y4tBxtN.png",
-  thinking: "https://yourimageshare.com/ib/hpwpo1bH2a.png",
-  talking: "https://yourimageshare.com/ib/wejYmdziST.png",
-  pointing: "https://yourimageshare.com/ib/QszUb92jtd.png"
-};
-const tips: Record<Page, string> = {
-  Home: "Hey! Welcome to New Wave. A little more ocean, a little less ordinary. Want me to show you around?",
-  Shop: "Good taste. Take a look around the shop. Find something that feels like you.",
-  Events: "The good nights start here. Explore what's coming up and save a date.",
-  "Sound/Music": "Set the mood. Find the sounds and mixes moving through New Wave.",
-  Artists: "Meet the people making things happen. This is where the creative community lives.",
-  About: "New Wave is a coastal state of mind: relaxed, curious, creative and open to everybody.",
-  "New Wave": "You're in the New Wave section. Explore Editorial, Photography, Interviews and Culture."
-};
 const copy: Record<Page, {
   eyebrow: string;
   title: string;
@@ -63,35 +47,14 @@ const subsections = ["Editorial", "Photography", "Interviews", "Culture"];
 export const NewWaveMultiPagePrototype = () => {
   const [page, setPage] = useState<Page>("Home");
   const [subsection, setSubsection] = useState("Editorial");
-  const [assistantOpen, setAssistantOpen] = useState(false);
-  const [expression, setExpression] = useState<Expression>("idle");
-  const [message, setMessage] = useState(tips.Home);
   const [menuOpen, setMenuOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
-  useEffect(() => {
-    const timer = window.setTimeout(() => setExpression("idle"), 2600);
-    return () => window.clearTimeout(timer);
-  }, [expression]);
   const go = (next: Page) => {
     setPage(next);
     setMenuOpen(false);
     if (next === "New Wave") setSubsection("Editorial");
-  };
-  const ask = (kind: "tour" | "shop" | "events" | "music" | "artists") => {
-    const map = {
-      tour: "Home",
-      shop: "Shop",
-      events: "Events",
-      music: "Sound/Music",
-      artists: "Artists"
-    } as const;
-    const target = map[kind];
-    go(target);
-    setAssistantOpen(true);
-    setMessage(target === "Home" ? "Let's take a look around. Pick a section from the menu and I'll come with you." : tips[target]);
-    setExpression("pointing");
   };
   const current = copy[page];
   return <main className="nw">
@@ -127,37 +90,18 @@ export const NewWaveMultiPagePrototype = () => {
       <div className="nw-section-heading"><span>THE NEW WAVE EDIT</span><h2>Culture moves<br />in every direction.</h2></div>
       <div className="nw-tabs" role="tablist">{subsections.map(item => <button role="tab" aria-selected={subsection === item} className={subsection === item ? "selected" : ""} key={item} onClick={() => {
           setSubsection(item);
-          setExpression("thinking");
-          setMessage("Let's explore " + item.toLowerCase() + ". New stories will live here.");
         }}>{item}</button>)}</div>
       <div className="nw-editorial-panel"><div className="nw-panel-art"><span>NW / 00{subsections.indexOf(subsection) + 1}</span><b>{subsection.toUpperCase()}</b><i>✳</i></div><div><small>THE NEW WAVE EDIT / {subsection.toUpperCase()}</small><h3>{subsection === "Editorial" ? "Ideas worth staying for." : subsection === "Photography" ? "A different point of view." : subsection === "Interviews" ? "Meet the minds behind the motion." : "The world around the wave."}</h3><p>This space is ready for approved New Wave {subsection.toLowerCase()} stories and features.</p></div></div>
     </section>}
     {page === "Shop" && <section className="nw-content"><div className="nw-section-heading"><span>THE FIRST DROP IS ON ITS WAY</span><h2>Wear the feeling.</h2></div><div className="nw-product-grid">{["New Wave Oversized Tee", "Coastal Club Cap", "After The Tide Tote"].map((name, i) => <button className="nw-product" key={name} onClick={() => setSelectedProduct(name)}><div className={"nw-product-art art-" + i}><span>NEW<br />WAVE</span></div><b>{name}</b><small>{selectedProduct === name ? "Saved to your shortlist" : "Preview / Coming soon"}</small></button>)}</div></section>}
     {page === "Events" && <section className="nw-content"><div className="nw-section-heading"><span>THE CALENDAR</span><h2>See you out there.</h2></div><div className="nw-empty-state"><span>✳</span><h3>Good things are taking shape.</h3><p>Upcoming New Wave gatherings and ticket information will appear here once confirmed.</p></div></section>}
-    {page === "Sound/Music" && <section className="nw-content"><div className="nw-section-heading"><span>THE NEW WAVE SOUND</span><h2>Let the day play.</h2></div><div className="nw-mix"><span>NW RADIO / 001</span><b>THE COASTLINE<br />MIXTAPE</b><button onClick={() => setMessage("The music player will connect to the approved New Wave playlist when the music source is supplied.")}>▶ PREVIEW MIX</button></div></section>}
-    {page === "Artists" && <section className="nw-content"><div className="nw-section-heading"><span>THE CREATIVE COMMUNITY</span><h2>Make some noise.</h2></div><div className="nw-empty-state"><span>✳</span><h3>There's room for your voice.</h3><p>Artist profiles and submission opportunities will be published here.</p><button className="nw-outline" onClick={() => setMessage("Artist submissions will open here when the submission form and inbox are connected.")}>HOW TO SUBMIT ↗</button></div></section>}
+    {page === "Sound/Music" && <section className="nw-content"><div className="nw-section-heading"><span>THE NEW WAVE SOUND</span><h2>Let the day play.</h2></div><div className="nw-mix"><span>NW RADIO / 001</span><b>THE COASTLINE<br />MIXTAPE</b><button type="button" disabled aria-disabled="true">PLAYLIST COMING SOON</button></div></section>}
+    {page === "Artists" && <section className="nw-content"><div className="nw-section-heading"><span>THE CREATIVE COMMUNITY</span><h2>Make some noise.</h2></div><div className="nw-empty-state"><span>✳</span><h3>There's room for your voice.</h3><p>Artist profiles and submission opportunities will be published here.</p><button className="nw-outline" type="button" disabled aria-disabled="true">SUBMISSIONS OPENING SOON</button></div></section>}
     {page === "About" && <section className="nw-content nw-about"><div className="nw-section-heading"><span>WHAT WE'RE ABOUT</span><h2>A coastal state<br />of mind.</h2></div><p>New Wave is a lifestyle and culture space for people who are curious, creative and open to what comes next. A place to find good energy, discover new voices and leave a little room for the unexpected.</p></section>}
     <section className="nw-newsletter"><div><small>LET'S KEEP IN TOUCH</small><h2>A little wave<br />in your inbox.</h2></div><form onSubmit={e => {
         e.preventDefault();
         if (email.includes("@")) setJoined(true);
       }}><label htmlFor="nw-email">Your email address</label><div><input id="nw-email" type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" /><button>{joined ? "YOU'RE ON THE LIST ✓" : "SIGN ME UP ↗"}</button></div><small>{joined ? "Thanks — newsletter delivery will activate when the mailing service is connected." : "No noise. Just the good stuff."}</small></form></section>
     <footer className="nw-footer"><button className="nw-brand" onClick={() => go("Home")}><span>NEW</span><i>WAVE</i><b>✳</b></button><span>THE INTERNET NEEDS A BEACH DAY.</span><span>© NEW WAVE</span></footer>
-    <aside className={assistantOpen ? "nw-assistant is-open" : "nw-assistant"} aria-label="New Wave surfer guide">
-      {assistantOpen && <section className="nw-assistant-bubble" aria-live="polite">
-        <div className="nw-assistant-top"><span>YOUR NEW WAVE GUIDE</span><button aria-label="Close assistant message" onClick={() => setAssistantOpen(false)}>×</button></div>
-        <p>{message}</p>
-        <div className="nw-assistant-actions"><button onClick={() => ask("tour")}>Explore</button><button onClick={() => ask("shop")}>Shop</button><button onClick={() => ask("events")}>Events</button></div>
-        <span className="nw-assistant-hint">Tap me whenever you need a hand</span>
-      </section>}
-      <button className="nw-assistant-character" aria-label="Talk to your New Wave guide" onClick={() => {
-        setAssistantOpen(!assistantOpen);
-        setExpression("talking");
-      }} onMouseEnter={() => setExpression("pointing")} onMouseLeave={() => setExpression("idle")}>
-        <img src={expressions[expression]} alt="New Wave surfer girl guide" onError={e => {
-          (e.currentTarget as HTMLImageElement).style.visibility = "hidden";
-        }} />
-        <span className="nw-character-glint">✳</span><span className="nw-assistant-status">NEED A HAND?</span>
-      </button>
-    </aside>
   </main>;
 };
