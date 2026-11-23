@@ -7,6 +7,22 @@ The Sanity project is configured for:
 - Studio config: `sanity.config.ts`
 - Content schemas: `schemaTypes/`
 
+## Open the Studio on the deployed site
+
+The React app now includes an embedded Studio route:
+
+`https://new-wave-website.nueljones.workers.dev/studio`
+
+It uses the same Sanity project and schema configuration. The route will become available after the Cloudflare Pages/Workers build deploys the latest GitHub commit.
+
+Because this Studio is hosted on the New Wave domain, add this exact CORS origin in Sanity:
+
+`https://new-wave-website.nueljones.workers.dev`
+
+Enable **Allow credentials** for this origin because the Studio needs the signed-in Sanity session. Do not use a wildcard origin.
+
+In Sanity Manage: select New-wave → Settings → API settings → CORS Origins → Add CORS origin.
+
 ## Run the Studio locally
 
 From the repository root:
