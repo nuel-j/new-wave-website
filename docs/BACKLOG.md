@@ -112,3 +112,29 @@ These are prioritized. Existing visual direction and navigation are settled; que
 - [ ] Integrate fully animated guide with click-only communication and verify on mobile.
 
 See `docs/CHARACTER_RECONSTRUCTION_PROGRESS.md` for current status and artifact details.
+
+
+## Multi-page completion pass — 2026-11-23
+
+- [x] Reworked the Shop page into a coherent first-drop preview with product cards and explicit pre-launch status.
+- [x] Reworked Events into three clear event formats with honest “details to come” labels; no dates or venues invented.
+- [x] Reworked Sound into three listening-mood cards and made the missing audio-provider dependency explicit.
+- [x] Reworked Artists into creative disciplines and a submission information panel; no fake artist profiles or contact endpoints.
+- [x] Expanded About with the brand purpose and three guiding values.
+- [x] Expanded New Wave's Editorial, Photography, Interviews and Culture tabs with distinct descriptions and section states.
+- [x] Added consistent section headings, responsive card layouts, section-specific colors, and footer navigation.
+- [x] Changed newsletter interaction so it no longer claims a real subscription was completed; it clearly identifies the form as preview-only until a mailing provider is connected.
+- [x] Kept the mascot stationary by default and click-only for opening its guide panel; navigation no longer changes her expression.
+
+### Still required before calling the website launch-ready
+- [ ] Run a production build and verify all pages on mobile and desktop. No CI status checks are currently reported for the latest commits.
+- [ ] Confirm the Cloudflare deployment picked up the latest main-branch commits; live preview fetch was unavailable during this session.
+- [ ] Connect real product inventory, payment/checkout and order handling.
+- [ ] Connect confirmed event data and ticketing.
+- [ ] Connect the official music/playlist source and audio playback.
+- [ ] Connect the artist submission destination and moderation workflow.
+- [ ] Connect newsletter provider and verify consent, delivery and unsubscribe flow.
+- [ ] Replace any remaining sample imagery with approved brand assets and verify image-host reliability.
+- [ ] Complete accessibility, keyboard, reduced-motion and real-device QA.
+
+The page layouts are now materially more complete, but the external business services above are not connected and must not be represented as live.
