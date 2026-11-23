@@ -138,3 +138,19 @@ See `docs/CHARACTER_RECONSTRUCTION_PROGRESS.md` for current status and artifact 
 - [ ] Complete accessibility, keyboard, reduced-motion and real-device QA.
 
 The page layouts are now materially more complete, but the external business services above are not connected and must not be represented as live.
+
+
+## Admin Control Room preview — 2026-11-23
+
+- [x] Added a dedicated /admin route and responsive Control Room interface.
+- [x] Added overview dashboard and navigation for Homepage, Shop, Events, Sound & Music, Artists, About, Editorial, Media Library and Settings.
+- [x] Added create/edit/delete controls and draft/publish state actions for content records.
+- [x] Added field sets for product pricing/variants, event posters/date/venue/ticket links, music artwork/artist/streaming links, artist biographies/photos/socials, editorial articles, and homepage content.
+- [x] Added an About page story-block builder concept.
+- [x] Enabled Cloudflare single-page-app fallback so /admin resolves to the React app.
+- [x] Intentionally excluded payment and shipping integrations.
+
+### Important implementation boundary
+This first visible Control Room is a browser-local preview: its sample records and edits are saved to localStorage in the current browser only. It is not yet authenticated, does not upload image files, and does not yet write to a shared CMS/database or update the public site's content for other visitors. Do not treat it as production-ready admin access. The next required step is to connect a real content backend (Sanity or another selected CMS), secure the admin route and write APIs, replace local sample state with persisted CMS queries, and wire published content into the public page components.
+
+No GitHub Actions build/deploy workflows or commit status checks are configured/reported in this repository at this time. Cloudflare deployment after the main-branch commits has not been independently verified in this session.
