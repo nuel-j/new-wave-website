@@ -127,3 +127,14 @@ A complete local recovery archive was assembled and uploaded to the persistent C
 - Project decisions, backlog, animation specification, progress history and prototype source remain in this GitHub repository.
 
 This is a cloud/library recovery backup, not a direct copy to the user's laptop. The user can download the ZIP to the laptop when it is available. No claim is made that the archive contains a production-ready skeletal rig or complete production website.
+
+
+## Mascot interaction cleanup — 2026-11-23
+
+- Removed the page-wide click handler that was changing the mascot to a thinking pose whenever any button or link was clicked. This was the main source of unrelated expression switching.
+- Mascot pose changes are now tied to explicit visitor actions: navigation to Shop/New Wave/Events, selected editorial tabs, product selection, or opening/closing the guide.
+- Removed the decorative star glyphs from the brand marks, hero copy, and page sections.
+- Added final CSS overrides to disable mascot float, hover, active, and glint animations. The character stays still between intentional interactions.
+- The assistant bubble remains closed until the visitor clicks the mascot; closing it restores the idle expression.
+- **Asset integration still pending:** the newly supplied transparent PNG pose images have been inspected, but the repository still references the older external image-host URLs. They must be added to the repository's public assets before the new artwork is live. The uploaded turnaround and planning boards are references, not web-ready character files.
+- Deployment/build has not yet been independently verified from the live Workers URL.
