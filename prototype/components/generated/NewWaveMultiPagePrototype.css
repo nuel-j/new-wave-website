@@ -49,3 +49,22 @@
 @keyframes nw-bubble-in{from{opacity:0;transform:translateY(8px) scale(.97);transform-origin:bottom right}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:700px){.nw-assistant{right:10px;bottom:calc(8px + env(safe-area-inset-bottom));gap:5px}.nw-assistant-character{width:clamp(82px,24vw,112px)}.nw-assistant-character img{max-height:clamp(110px,18vh,155px)}.nw-assistant-bubble{width:min(278px,calc(100vw - 28px));padding:11px 12px 10px}.nw-assistant-bubble p{font-size:12px;margin:9px 0}.nw-assistant-actions button{padding:7px 9px;font-size:8px}.nw-assistant-status{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.nw-assistant-character,.nw-character-glint,.nw-assistant-bubble{animation:none!important}.nw-assistant-character img{transition:none}}
+
+/* Full-viewport layout guard: prevents the site being trapped in a narrow parent. */
+.nw{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);overflow-x:clip}
+.nw-header,.nw-hero,.nw-home-grid,.nw-content,.nw-newsletter,.nw-footer{width:100%;min-width:0}
+.nw-home-grid>*,.nw-content>*,.nw-newsletter>*{min-width:0}
+@media(max-width:700px){
+  .nw-header{padding-inline:18px;gap:12px}
+  .nw-brand{font-size:22px}
+  .nw-hero-copy{width:calc(100% - 44px);max-width:82%}
+  .nw-description{max-width:100%}
+  .nw-hero-note{max-width:calc(100% - 44px);font-size:9px;line-height:1.5}
+  .nw-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nw-feature{min-width:0;overflow-wrap:anywhere}
+  .nw-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nw-newsletter form>div{gap:8px}
+  .nw-newsletter form button{white-space:nowrap}
+  .nw-assistant{max-width:calc(100vw - 20px)}
+  .nw-assistant-bubble{max-width:calc(100vw - 28px)}
+}
