@@ -50,8 +50,6 @@ export const NewWaveMultiPagePrototype = () => {
   const [page, setPage] = useState<Page>(() => pageFromPath());
   const [subsection, setSubsection] = useState("Editorial");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [joined, setJoined] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
   useEffect(() => {
     const syncPage = () => {
@@ -64,6 +62,7 @@ export const NewWaveMultiPagePrototype = () => {
       setPage(match);
       if (match === "New Wave") setSubsection("Editorial");
     };
+    syncPage();
     window.addEventListener("popstate", syncPage);
     return () => window.removeEventListener("popstate", syncPage);
   }, []);
@@ -118,10 +117,7 @@ export const NewWaveMultiPagePrototype = () => {
     {page === "Sound/Music" && <section className="nw-content"><div className="nw-section-heading"><span>THE NEW WAVE SOUND</span><h2>Let the day play.</h2></div><div className="nw-mix"><span>NW RADIO / 001</span><b>THE COASTLINE<br />MIXTAPE</b><button type="button" disabled aria-disabled="true">PLAYLIST COMING SOON</button></div></section>}
     {page === "Artists" && <section className="nw-content"><div className="nw-section-heading"><span>THE CREATIVE COMMUNITY</span><h2>Make some noise.</h2></div><div className="nw-empty-state"><span>✳</span><h3>There's room for your voice.</h3><p>Artist profiles and submission opportunities will be published here.</p><button className="nw-outline" type="button" disabled aria-disabled="true">SUBMISSIONS OPENING SOON</button></div></section>}
     {page === "About" && <section className="nw-content nw-about"><div className="nw-section-heading"><span>WHAT WE'RE ABOUT</span><h2>A coastal state<br />of mind.</h2></div><p>New Wave is a lifestyle and culture space for people who are curious, creative and open to what comes next. A place to find good energy, discover new voices and leave a little room for the unexpected.</p></section>}
-    <section className="nw-newsletter"><div><small>LET'S KEEP IN TOUCH</small><h2>A little wave<br />in your inbox.</h2></div><form onSubmit={e => {
-        e.preventDefault();
-        if (email.includes("@")) setJoined(true);
-      }}><label htmlFor="nw-email">Your email address</label><div><input id="nw-email" type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" /><button>{joined ? "YOU'RE ON THE LIST ✓" : "SIGN ME UP ↗"}</button></div><small>{joined ? "Thanks — newsletter delivery will activate when the mailing service is connected." : "No noise. Just the good stuff."}</small></form></section>
+    <section className="nw-newsletter"><div><small>LET'S KEEP IN TOUCH</small><h2>A little wave<br />in your inbox.</h2></div><form onSubmit={e => e.preventDefault()}><label htmlFor="nw-email">Newsletter signup</label><div><input id="nw-email" type="email" disabled placeholder="Signups opening soon" /><button type="button" disabled>COMING SOON</button></div><small>We'll open signups once newsletter delivery is connected.</small></form></section>
     <footer className="nw-footer"><button className="nw-brand" onClick={() => go("Home")}><span>NEW</span><i>WAVE</i><b>✳</b></button><span>THE INTERNET NEEDS A BEACH DAY.</span><span>© NEW WAVE</span></footer>
   </main>;
 };
